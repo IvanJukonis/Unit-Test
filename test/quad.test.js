@@ -171,5 +171,83 @@ describe('Quad' , () => {
             assert.equal(result.width, expectedWidth)
         })
     })
+
+    describe('set and get height' , () => {
+
+        it("Should return 5 when quad.height is 5", () => {
+            const quad = new Quad(1,2)
+            const expected = 5
+            quad.height = 5
+            const result = quad.height
+            assert.equal(result, expected)
+        })
+
+        it("Should return 5.5 when quad.height is 5", () => {
+            const quad = new Quad(1,2)
+            const expected = 5.5
+            quad.height = 5.5
+            const result = quad.height
+            assert.equal(result, expected)
+        })
+
+        it("Should return the same quad.height as before when set height to 0", () => {
+            const quad = new Quad(1,2)
+            const expected = 1
+            quad.height = 0
+            const result = quad.height
+            assert.equal(result, expected)
+        })
+
+        it("Should return the same quad.height as before when set height to []", () => {
+            const quad = new Quad(1,2)
+            const expected = 1
+            quad.height = []
+            const result = quad.height
+            assert.equal(result, expected)
+        })
+
+        it("Should return the same quad.height as before when set height to {}", () => {
+            const quad = new Quad(1,2)
+            const expected = 1
+            quad.height = {}
+            const result = quad.height
+            assert.equal(result, expected)
+        })
+
+        it("Should return the same quad.height as before when set height to -5", () => {
+            const quad = new Quad(1,2)
+            const expected = 1
+            quad.height = -5
+            const result = quad.height
+            assert.equal(result, expected)
+        })
+
+        it("Should return the same quad.height as before when set height to 'test'", () => {
+            const quad = new Quad(1,2)
+            const expected = 1
+            quad.height = 'test'
+            const result = quad.height
+            assert.equal(result, expected)
+        })
+
+        it("Should return 5 when quad.height is '5'", () => {
+            const quad = new Quad(1,2)
+            const expected = 5
+            quad.height = '5'
+            const result = quad.height
+            assert.equal(result, expected)
+        })
+
+        it("Should return the same quad.height as before when set height to ''", () => {
+            const quad = new Quad(1,2)
+            const expected = 1
+            quad.height = ''
+            const result = quad.height
+            assert.equal(result, expected)
+        })
+
+    })   
+     
 })
+
 
