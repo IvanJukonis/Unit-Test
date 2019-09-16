@@ -433,6 +433,80 @@ describe('Quad' , () => {
 
     })
 
+    describe('calculatePerimeter' , () => {
+
+        it("Should return 4 when parameters height and width are 2", () => {
+            const quad = new Quad(2,2)
+            const expected = 8
+            const result = quad.calculatePerimeter()
+            assert.equal(expected, result)
+        })
+
+        it("Should return 4 when parameters height is 2 and width is 0", () => {
+            const quad = new Quad(2,0)
+            const expected = 4
+            const result = quad.calculatePerimeter()
+            assert.equal(expected, result)
+        })
+
+        it("Should return 4 when parameter height is 2 and width is []", () => {
+            const quad = new Quad(2,[])
+            const expected = 4
+            const result = quad.calculatePerimeter()
+            assert.equal(expected, result)
+        })
+
+        it("Should return 4 when parameter height is 2 or width is [2]", () => {
+            const quad = new Quad(2,[2])
+            const expected = 4
+            const result = quad.calculatePerimeter()
+            assert.equal(expected, result)
+        })
+
+        it("Should return 4 when parameter height is 2 and width is {}", () => {
+            const quad = new Quad(2,{})
+            const expected = 4
+            const result = quad.calculatePerimeter()
+            assert.equal(expected, result)
+        })
+
+        it("Should return 4 when parameters height is 2 and width is -2", () => {
+            const quad = new Quad(2,-2)
+            const expected = 4
+            const result = quad.calculatePerimeter()
+            assert.equal(expected, result)
+        })
+
+        it("Should return 4 when parameters height is 2 and width is 'test'", () => {
+            const quad = new Quad(2,'test')
+            const expected = 4
+            const result = quad.calculatePerimeter()
+            assert.equal(expected, result)
+        })
+
+        it("Should return 8 when parameters height is '2' and width is 2", () => {
+            const quad = new Quad(2,'2')
+            const expected = 8
+            const result = quad.calculatePerimeter()
+            assert.equal(expected, result)
+        })
+
+        it("Should return 4 when parameters height is 2 and width is ''", () => {
+            const quad = new Quad(2,'')
+            const expected = 4
+            const result = quad.calculatePerimeter()
+            assert.equal(expected, result)
+        })
+
+        it("Should return 85.01 when parameters height is 9.2222222222 and width is 9.2222222222", () => {
+            const quad = new Quad(9.2222222222,9.2222222222)
+            const expected = 36.88
+            const result = quad.calculatePerimeter()
+            assert.equal(expected, result)
+        })
+
+    })
+
 })
 
 
