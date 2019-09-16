@@ -3,7 +3,7 @@ var Quad = require('./quad')
 
 class Rectangle extends Quad {
 
-    constructor(height=0, width=0) {
+    constructor(height=1, width=1) {
         super(height, width)
     }
 
