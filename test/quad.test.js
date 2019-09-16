@@ -246,8 +246,84 @@ describe('Quad' , () => {
             assert.equal(result, expected)
         })
 
-    })   
-     
+    })
+    
+    describe('set and get width' , () => {
+
+        it("Should return 5 when quad.width is 5", () => {
+            const quad = new Quad(2,1)
+            const expected = 5
+            quad.width = 5
+            const result = quad.width
+            assert.equal(result, expected)
+        })
+
+        it("Should return 5.5 when quad.width is 5", () => {
+            const quad = new Quad(2,1)
+            const expected = 5.5
+            quad.width = 5.5
+            const result = quad.width
+            assert.equal(result, expected)
+        })
+
+        it("Should return the same quad.width as before when set width to 0", () => {
+            const quad = new Quad(2,1)
+            const expected = 1
+            quad.width = 0
+            const result = quad.width
+            assert.equal(result, expected)
+        })
+
+        it("Should return the same quad.width as before when set width to []", () => {
+            const quad = new Quad(2,1)
+            const expected = 1
+            quad.width = []
+            const result = quad.width
+            assert.equal(result, expected)
+        })
+
+        it("Should return the same quad.width as before when set width to {}", () => {
+            const quad = new Quad(2,1)
+            const expected = 1
+            quad.width = {}
+            const result = quad.width
+            assert.equal(result, expected)
+        })
+
+        it("Should return the same quad.width as before when set width to -5", () => {
+            const quad = new Quad(2,1)
+            const expected = 1
+            quad.width = -5
+            const result = quad.width
+            assert.equal(result, expected)
+        })
+
+        it("Should return the same quad.width as before when set width to 'test'", () => {
+            const quad = new Quad(2,1)
+            const expected = 1
+            quad.width = 'test'
+            const result = quad.width
+            assert.equal(result, expected)
+        })
+
+        it("Should return 5 when quad.width is '5'", () => {
+            const quad = new Quad(2,1)
+            const expected = 5
+            quad.width = '5'
+            const result = quad.width
+            assert.equal(result, expected)
+        })
+
+        it("Should return the same quad.width as before when set width to ''", () => {
+            const quad = new Quad(2,1)
+            const expected = 1
+            quad.width = ''
+            const result = quad.width
+            assert.equal(result, expected)
+        })
+
+    })
+
 })
 
 

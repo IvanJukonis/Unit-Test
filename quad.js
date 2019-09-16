@@ -19,7 +19,7 @@ class Quad {
     }
 
     set height(value) {
-        if(isNaN(value) || value <= 0)return
+        if(isNaN(value) || value <= 0) return
         this._height = parseFloat(value)
     }
 
@@ -28,7 +28,7 @@ class Quad {
     }
 
     set width(value) {
-        if(isNaN(value)) throw 'Width exptecs a number'
+        if(isNaN(value) || value <= 0) return
         this._width = parseFloat(value)
     }
 
