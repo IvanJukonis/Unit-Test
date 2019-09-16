@@ -5,7 +5,7 @@ class Quad {
             return 'Error'
         if (isNaN(height) || typeof height === 'object' || height <= 0)
             return 'Error'    
-        return (width * 2) + (height * 2)
+        return parseFloat((width * 2) + (height * 2)).toFixed(2)
     }
 
     constructor(height=1, width=1) {
@@ -14,13 +14,13 @@ class Quad {
             this._width = 1
             return
         } 
-        this._height = height
-        this._width = width
+        this._height = parseFloat(height).toFixed(2)
+        this._width = parseFloat(width).toFixed(2)
     }
 
     set height(value) {
         if(isNaN(value) || value <= 0) return
-        this._height = parseFloat(value)
+        this._height = parseFloat(value).toFixed(2)
     }
 
     get height() {
@@ -29,7 +29,7 @@ class Quad {
 
     set width(value) {
         if(isNaN(value) || value <= 0) return
-        this._width = parseFloat(value)
+        this._width = parseFloat(value).toFixed(2)
     }
 
     get width() {
@@ -37,11 +37,11 @@ class Quad {
     }
 
     get area() {
-        return this._width * this._height
+        return  parseFloat(this._width * this._height).toFixed(2)
     }
 
     calculatePerimeter() {
-        return (this._width * 2) + (this._height * 2)
+        return parseFloat((this._width * 2) + (this._height * 2)).toFixed(2)
     }
 
 }
