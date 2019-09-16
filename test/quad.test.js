@@ -324,6 +324,80 @@ describe('Quad' , () => {
 
     })
 
+    describe('get area' , () => {
+
+        it("Should return 4 when parameters height and width are 2", () => {
+            const quad = new Quad(2,2)
+            const expected = 4
+            const result = quad.area
+            assert.equal(expected, result)
+        })
+
+        it("Should return 1 when parameters height or width are 0", () => {
+            const quad = new Quad(2,0)
+            const expected = 1
+            const result = quad.area
+            assert.equal(expected, result)
+        })
+
+        it("Should return 1 when parameter height is 5 and width is []", () => {
+            const quad = new Quad(2,[])
+            const expected = 1
+            const result = quad.area
+            assert.equal(expected, result)
+        })
+
+        it("Should return 1 when parameter height is 5 or width is [2]", () => {
+            const quad = new Quad(2,[2])
+            const expected = 1
+            const result = quad.area
+            assert.equal(expected, result)
+        })
+
+        it("Should return 1 when parameter height is 5 and width is {}", () => {
+            const quad = new Quad(2,{})
+            const expected = 1
+            const result = quad.area
+            assert.equal(expected, result)
+        })
+
+        it("Should return 1 when parameters height is 5 and width is -5", () => {
+            const quad = new Quad(2,-2)
+            const expected = 1
+            const result = quad.area
+            assert.equal(expected, result)
+        })
+
+        it("Should return 1 when parameters height is 'test' and width is 2", () => {
+            const quad = new Quad(2,'test')
+            const expected = 1
+            const result = quad.area
+            assert.equal(expected, result)
+        })
+
+        it("Should return 4 when parameters height is '2' and width is 2", () => {
+            const quad = new Quad(2,'2')
+            const expected = 4
+            const result = quad.area
+            assert.equal(expected, result)
+        })
+
+        it("Should return 1 when parameters height is '' and width is 5", () => {
+            const quad = new Quad(2,'')
+            const expected = 1
+            const result = quad.area
+            assert.equal(expected, result)
+        })
+
+        it("Should return Error when parameters height is '' and width is 5", () => {
+            const quad = new Quad(9.2222222222,9.2222222222)
+            const expected = 85.01
+            const result = quad.area
+            assert.equal(expected, result)
+        })
+
+    })
+
 })
 
 
