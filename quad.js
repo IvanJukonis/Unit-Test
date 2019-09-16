@@ -8,7 +8,12 @@ class Quad {
         return (width * 2) + (height * 2)
     }
 
-    constructor(height=0, width=0) {
+    constructor(height=1, width=1) {
+        if (isNaN(width) || typeof width === 'object' || width <= 0 || isNaN(height) || typeof height === 'object' || height <= 0){
+            this._height = 1
+            this._width = 1
+            return
+        } 
         this._height = height
         this._width = width
     }
