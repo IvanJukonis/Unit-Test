@@ -77,6 +77,14 @@ describe('Quad' , () => {
             assert.equal(expected, result)
         })
 
+        it("Should return 36.89 when parameters height is and width are 9.2222222222", () => {
+            const height = 9.2222222222
+            const width = 9.2222222222
+            const expected = 36.89
+            const result = Quad.CalculatePerimeter(height,width)
+            assert.equal(expected, result)
+        })
+
     })
 
     describe('constructor' , () => {
@@ -170,6 +178,17 @@ describe('Quad' , () => {
             assert.equal(result.height, expectedHeight)
             assert.equal(result.width, expectedWidth)
         })
+
+        it("Should return a new Quad(9.22,9.22) when parameters height and width are 9.2222222222", () => {
+            const height = 9.2222222222
+            const width = 9.2222222222
+            const expectedHeight = 9.22
+            const expectedWidth = 9.22
+            const result = new Quad(height,width)
+            assert.equal(result.height, expectedHeight)
+            assert.equal(result.width, expectedWidth)
+        })
+
     })
 
     describe('set and get height' , () => {
@@ -246,6 +265,14 @@ describe('Quad' , () => {
             assert.equal(result, expected)
         })
 
+        it("Should return 9.22 when parameter height is 9.2222222222", () => {
+            const quad = new Quad(2,1)
+            const expected = 9.22
+            quad.height = 9.2222222222
+            const result = quad.height
+            assert.equal(result, expected)
+        })
+
     })
     
     describe('set and get width' , () => {
@@ -318,6 +345,14 @@ describe('Quad' , () => {
             const quad = new Quad(2,1)
             const expected = 1
             quad.width = ''
+            const result = quad.width
+            assert.equal(result, expected)
+        })
+
+        it("Should return 9.22 when parameter width is 9.2222222222", () => {
+            const quad = new Quad(2,1)
+            const expected = 9.22
+            quad.width = 9.2222222222
             const result = quad.width
             assert.equal(result, expected)
         })
