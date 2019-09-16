@@ -1,6 +1,10 @@
 class Quad {
 
     static CalculatePerimeter(height, width) {
+        if (isNaN(width) || typeof width === 'object' || width <= 0)
+            return 'Error'
+        if (isNaN(height) || typeof height === 'object' || height <= 0)
+            return 'Error'    
         return (width * 2) + (height * 2)
     }
 
